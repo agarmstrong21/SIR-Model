@@ -1,6 +1,6 @@
 public class Driver{
     public static void main(String[]args){
-       Block temp = new Block(1, .1, 100000, 2, 0);
+       Block temp = new Block(1, .1, 100000000, 2, 0);
        int counter = 0;
        System.out.println("Time Step " + counter);
        temp.printOut();
