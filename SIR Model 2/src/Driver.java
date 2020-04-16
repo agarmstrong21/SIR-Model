@@ -15,7 +15,6 @@ public class Driver{
            output.print(counter + "\t");
            temp.nextTimeStep();
            output.print(temp.printOut() + "\n");
-           //System.out.println();
            counter++;
        }
     }

@@ -7,11 +7,20 @@ import java.util.Scanner;
 public class DriverForMultipleBlocks {
     public static void main(String[] args) throws FileNotFoundException {
         PrintStream output = new PrintStream(new File("testMultiple"));
+        Scanner input = new Scanner(new File("SIR Model 2/src/TestingAgain"));
 
         int beta = 2;
         double gamma = 1.4;
-        Block[] blocks = new Block[10];
-        blocks[0] = new Block(beta, gamma, 4779,2,0);
+        Block[] blocks = new Block[48];
+        String[] names = new String[48];
+
+
+
+        for(int i = 0; i < 48; i++){
+            names[i] = input.next();
+            blocks[i] = new Block(beta, gamma, input.nextInt(), 2, 0);
+        }
+        /*blocks[0] = new Block(beta, gamma, 4779,2,0);
         blocks[1] = new Block(beta, gamma, 3442,2,0);
         blocks[2] = new Block(beta, gamma, 7436,2,0);
         blocks[3] = new Block(beta, gamma, 5008,2,0);
@@ -20,11 +29,14 @@ public class DriverForMultipleBlocks {
         blocks[6] = new Block(beta, gamma, 3376,2,0);
         blocks[7] = new Block(beta, gamma, 3189,2,0);
         blocks[8] = new Block(beta, gamma, 33,2,0);
-        blocks[9] = new Block(beta, gamma, 2830,2,0);
+        blocks[9] = new Block(beta, gamma, 2830,2,0);*/
 
+        for(int i = 0; i < 48; i++){
+            output.print("\t" + names[i] + "\t\t\t");
+        }
         for(int i = 0; i <= 25; i++){
             output.print(i + "\t");
-            for(int j = 0; j < 10; j++){
+            for(int j = 0; j < 48; j++){
                 blocks[j].nextTimeStep();
                 output.print(blocks[j].printOut());
             }
