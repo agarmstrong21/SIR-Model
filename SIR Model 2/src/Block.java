@@ -72,11 +72,12 @@ public class Block {
         }
 
         // Print out stats
-        System.out.println("S: " + susceptible + "\nI: " + infected + "\nR: " + resistant + "\nP: " + (infected+susceptible+resistant));
+        //printOut();
+        //System.out.println("S: " + susceptible + "\tI: " + infected + "\tR: " + resistant + "\tP: " + (infected+susceptible+resistant));
     }
 
-    public void printOut(){
-        System.out.println("S: " + susceptible + "\nI: " + infected + "\nR: " + resistant + "\nP: " + population);
+    public String printOut(){
+        return susceptible + "\t" + infected + "\t" + resistant + "\t" + population + "\t";
     }
 
     public boolean hasNextTimeStep(){
