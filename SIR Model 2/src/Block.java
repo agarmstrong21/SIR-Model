@@ -19,9 +19,10 @@ public class Block {
     // Getters
     public double getBeta(){return beta;}
     public double getGamma(){return gamma;}
-    public double getSusceptible(){return susceptible;}
+    public int getSusceptible(){return susceptible;}
     public double getInfected(){return infected;}
     public double getResistant(){return resistant;}
+    public int getPopulation(){return population;}
 
     // Setters
     public void setBeta(double b){this.beta = b;}
@@ -29,6 +30,7 @@ public class Block {
     public void setSusceptible(int s){this.susceptible = s;}
     public void setInfected(int i){this.infected = i;}
     public void setResistant(int r){this.resistant = r;}
+    public void setPopulation(int p){this.population = p;}
 
     public void nextTimeStep(){
         // Setting all previous values
